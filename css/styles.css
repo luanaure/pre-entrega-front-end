@@ -1,0 +1,21 @@
+header {
+    background-color: #eec1ff;
+    color: #18021f;
+    font-family: DejaVu Serif, sans-serif;
+}
+
+footer {
+    background-color: #333333;
+    color: #ffffff;
+    font-family: DejaVu Serif, sans-serif;
+}
+
+.navbar {
+    list-style: none;
+    background-color: #333333;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ffffff;
+}
