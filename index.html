@@ -1,85 +1,183 @@
-<!--Aca empieza la estructura pincipal del sitio-->
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vero Impresiones</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
 
+    <title>Vero Impresiones</title>
+
+    <!-- Hoja de estilos CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Fuentes de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
 
 <body>
 
-<!--Aca empieza el header con el Isotipo, el titulo y slogan de vero impresiones-->
+    <!-- Cinta animada de logos -->
+  
+<!-- 1. NAVBAR PRINCIPAL -->
+<header class="encabezado">
+    <nav class="navegacion" aria-label="Navegación principal">
 
+        <!-- Logo y nombre de la marca -->
+        <a href="index.html" class="marca">
+            <img src="imagenes/isotipoestrella.png" alt="" class="logo-v">
 
-       <header>
-      <img  src="imagenes/logotipo violeta.png" alt="logotipo de vero impresiones" width="250" height="35">
-<p><strong>Creaciones que dejan huella</strong></p>
+            <span class="nombre-marca">
+                <p><strong>Vero</strong> <strong>Impresiones</strong></p>
+            </span>
+        </a>
 
-    </header>
+        <!-- Enlaces -->
+        <ul class="navbar">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pages/packemprendedor.html">Emprendedores</a></li>
+            <li><a href="pages/cumpleañosyeventos.html">Cumpleaños y eventos</a></li>
+            <li><a href="pages/regalospersonalizados.html">Regalos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
 
-<!--Creo una lista desordenada para el menu de navegacion (navbar)-->
-  <nav> 
-<ul class="navbar">
-        <li> <a href="index.html">Inicio</a> </li>
-        <li> <a href="pages/packemprendedor.html">Pack Emprendedores</a> </li>
-        <li> <a href="pages/regalospersonalizados.html">Regalos Personalizados</a> </li>
-        <li> <a href="pages/cumpleañosyeventos.html">Cumpleaños y Eventos</a> </li>
-        <li> <a href="pages/diasespeciales.html">Días Especiales</a> </li>
-        <li> <a href="pages/personalizados.html">Personalizados</a> </li>
-        
-</ul>
+        <!-- Botón de WhatsApp -->
+        <a class="boton-consultar"
+           href="https://wa.me/5491127883152"
+           target="_blank"
+           rel="noopener noreferrer">
+            Consultar por WhatsApp
+        </a>
+
     </nav>
+</header>
 
-<!--Aca empieza el contenido principal del sitio, donde ira informacion más especifica de Vero impresiones-->
+<!-- 2. CINTA ANIMADA DE LOGOS -->
+<div class="cinta-marca">
+    <div class="cinta-contenido">
+
+        <div class="grupo-logos">
+            <img src="imagenes/logotipo.png" alt="Vero Impresiones">
+            <img src="imagenes/isotipo.svg" alt="">
+            <img src="imagenes/logotipo.png" alt="">
+            <img src="imagenes/isotipo.svg" alt="">
+        </div>
+
+        <div class="grupo-logos" aria-hidden="true">
+            <img src="imagenes/logotipo.png" alt="">
+            <img src="imagenes/isotipo.svg" alt="">
+            <img src="imagenes/logotipo.png" alt="">
+            <img src="imagenes/isotipo.svg" alt="">
+        </div>
+
+    </div>
+</div>
+
+    <!-- Contenido principal -->
     <main>
-        <p>En <strong>Vero impresiones</strong> hacemos tus ideas realidad a través de productos personalizados, pensados para cada ocasión y cada persona.</p>
 
-        <!--videos de muestra de los productos que vende, mejorar el trañano de la imagen de preview-->
-    <video controls poster="imagenes/previewalbum.png" width="300" height="533">
-        <source src="videos/albumpareja.mp4" type="video/mp4">
-        <track src="videos/album.vtt" kind="subtitles" srclang="es" label="Español" default>
-        Tu navegador no soporta el elemento de video.
-    </video>
+        <!-- Presentación principal -->
+        <section class="presentacion">
+            <div class="contenido-presentacion">
 
-     <video controls poster="imagenes/previewcajacomunion.png" width="300" height="533">
-        <source src="videos/primeracomunion.mp4" type="video/mp4">
-        <track src="videos/comunion.vtt" kind="subtitles" srclang="es" label="Español" default>
-        Tu navegador no soporta el elemento de video.
-    </video>
+                <div class="texto-presentacion">
+                    <h1>Ideas únicas para cada ocasión</h1>
 
-     <video controls poster="imagenes/previewpasajedeavion.png" width="300" height="533">
-        <source src="videos/pasajeavionregalo.mp4" type="video/mp4">
-        <track src="videos/pasaje.vtt" kind="subtitles" srclang="es" label="Español" default>
-        Tu navegador no soporta el elemento de video.
-    </video>
+                    <p>
+                        En <strong>Vero Impresiones</strong> creamos productos
+                        personalizados, pensados para cada ocasión y cada persona.
+                    </p>
+                </div>
 
-<section id"Contacto">
-    <h2>Contacto</h2>
-    <form action="https://formspree.io/f/xrpbjoog" method="POST">
+                <div class="imagen-presentacion">
+                    <img src="imagenes/fotopresentación.png"
+                         alt="Productos personalizados de Vero Impresiones">
+                </div>
 
-        <label for ="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
+            </div>
+        </section>
 
-        <label for ="email">Correo Electrónico:</label>
-        <input type="email" id="email" name="email" required>
+        <!-- Videos de productos -->
+        <section class="trabajos">
+            <h2>Creaciones que inspiran</h2>
 
-        <label for ="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea>
-        <button type="submit">Enviar</button>
-    </form>
-</section>
+            <video controls poster="imagenes/previewalbum.png" width="300" height="533">
+                <source src="videos/albumpareja.mp4" type="video/mp4">
+                <track src="videos/album.vtt" kind="subtitles" srclang="es" label="Español" default>
+                Tu navegador no soporta el elemento de video.
+            </video>
+
+            <video controls poster="imagenes/previewcajacomunion.png" width="300" height="533">
+                <source src="videos/primeracomunion.mp4" type="video/mp4">
+                <track src="videos/comunion.vtt" kind="subtitles" srclang="es" label="Español" default>
+                Tu navegador no soporta el elemento de video.
+            </video>
+
+            <video controls poster="imagenes/previewpasajedeavion.png" width="300" height="533">
+                <source src="videos/pasajeavionregalo.mp4" type="video/mp4">
+                <track src="videos/pasaje.vtt" kind="subtitles" srclang="es" label="Español" default>
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </section>
+
+        <!-- Categorías principales -->
+        <section class="categorias">
+            <h2>¿Qué estás buscando?</h2>
+
+            <div class="contenedor-categorias">
+
+                <article class="tarjeta-categoria">
+                    <h3>Packs para Emprendedores</h3>
+                    <p>Todo lo que necesitás para darle identidad a tu emprendimiento.</p>
+                </article>
+
+                <article class="tarjeta-categoria">
+                    <h3>Cumpleaños y Eventos</h3>
+                    <p>Detalles personalizados para celebrar momentos especiales.</p>
+                </article>
+
+                <article class="tarjeta-categoria">
+                    <h3>Regalos Personalizados</h3>
+                    <p>Creaciones pensadas para regalar y sorprender.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Formulario de contacto -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+
+            <form action="https://formspree.io/f/xrpbjoog" method="POST">
+
+                <div class="campo-formulario">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
 
     </main>
 
-   
-<!--Aca van los datos de contacto, ubicacion y enlace a redes sociales-->
+    <!-- Información de contacto -->
     <footer>
-        <p> <Strong>Contacto:</Strong> 1127883152</p>
-         <p> <Strong>Ubicación:</Strong> Villa Lugano y Mataderos</p>
-          <p> <Strong>Instagram:</Strong> @veroimpresiones</p>
+        <p><strong>Contacto:</strong> 1127883152</p>
+        <p><strong>Ubicación:</strong> Villa Lugano y Mataderos</p>
+        <p><strong>Instagram:</strong> @veroimpresiones</p>
     </footer>
 
 </body>

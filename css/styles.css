@@ -1,21 +1,350 @@
-header {
-    background-color: #eec1ff;
+
+/* ========================================
+   1. ESTILOS GENERALES
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(to right, #eec1ff, #b290bf);
+    font-size: 1rem;
+}
+
+
+/* ========================================
+   2. CINTA ANIMADA DE LOGOS
+======================================== */
+
+.cinta-marca {
+    height: 90px;
+    width: 100%;
+    margin: 0;
+    background-color: #18021f;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.cinta-contenido {
+    display: flex;
+    width: max-content;
+    animation: mover-cinta 20s linear infinite;
+}
+
+.grupo-logos {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-right: 40px;
+    flex-shrink: 0;
+}
+
+.grupo-logos img {
+    height: 45px;
+    width: auto;
+    display: block;
+    flex-shrink: 0;
+}
+
+@keyframes mover-cinta {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+/* ========================================
+   3. ENCABEZADO Y BARRA DE NAVEGACIÓN
+======================================== */
+
+.encabezado {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: #f3eee5;
+    padding: 15px 4%;
+    box-shadow: 0 2px 8px rgba(24, 2, 31, 0.10);
+}
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+}
+
+/* Marca */
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
     color: #18021f;
-    font-family: DejaVu Serif, sans-serif;
+    text-decoration: none;
 }
 
-footer {
-    background-color: #333333;
-    color: #ffffff;
-    font-family: DejaVu Serif, sans-serif;
+.logo-v {
+    display: block;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transition: transform 0.4s ease;
 }
 
+.marca:hover .logo-v {
+    transform: translateY(-6px) rotate(-12deg) scale(1.15);
+}
+
+.nombre-marca {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    white-space: nowrap;
+}
+
+.nombre-marca strong {
+    font-family: "Playfair Display", serif;
+    font-size: 1.2rem;
+}
+
+.nombre-marca small {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+}
+
+/* Enlaces */
 .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
     list-style: none;
-    background-color: #333333;
+    padding: 12px 24px;
+    margin: 0;
+    border: 1px solid #18021f;
+    border-radius: 50px;
+    background-color: #eec1ff;
+    width: auto;
+    max-width: none;
 }
 
 .navbar a {
+    color: #18021f;
     text-decoration: none;
-    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9rem;
+}
+
+.navbar a:hover {
+    color: #77607f;
+}
+
+/* Botón de WhatsApp */
+.boton-consultar {
+    display: inline-block;
+    flex-shrink: 0;
+    padding: 12px 18px;
+    border-radius: 8px;
+    background-color: #18021f;
+    color: #f3eee5;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+}
+
+.boton-consultar:hover {
+    background-color: #77607f;
+}
+
+
+/* ========================================
+   4. PRESENTACIÓN
+======================================== */
+
+.presentacion {
+    background-color: #f3eee5;
+    padding: 25px 40px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.contenido-presentacion {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.texto-presentacion {
+    flex: 1;
+}
+
+.imagen-presentacion {
+    flex: 1;
+}
+
+.imagen-presentacion img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   5. VIDEOS Y TRABAJOS
+======================================== */
+
+.trabajos {
+    padding: 30px;
+    text-align: center;
+}
+
+.trabajos video {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    margin: 10px;
+}
+
+
+/* ========================================
+   6. CATEGORÍAS
+======================================== */
+
+.categorias {
+    padding: 30px;
+    text-align: center;
+}
+
+.contenedor-categorias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tarjeta-categoria {
+    background-color: #f3eee5;
+    border: 1px solid #b290bf;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+
+/* ========================================
+   7. CONTACTO Y FORMULARIO
+======================================== */
+
+#contacto {
+    padding: 30px;
+}
+
+#contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#contacto input,
+#contacto textarea {
+    padding: 10px;
+    font-family: "Montserrat", sans-serif;
+    border: 1px solid #b290bf;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#contacto button {
+    background-color: #18021f;
+    color: #eec1ff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#contacto button:hover {
+    background-color: #77607f;
+}
+
+
+/* ========================================
+   8. FOOTER
+======================================== */
+
+footer {
+    background-color: #18021f;
+    color: #eec1ff;
+    font-family: "Playfair Display", serif;
+    padding: 10px;
+}
+
+footer a {
+    color: #eec1ff;
+    text-decoration: none;
+}
+
+
+/* ========================================
+   9. DISEÑO RESPONSIVE
+======================================== */
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .presentacion {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .contenido-presentacion {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imagen-presentacion img {
+        max-width: 350px;
+    }
+}
+
+
+/* Respetar la preferencia de reducir movimiento */
+
+@media (prefers-reduced-motion: reduce) {
+    .cinta-contenido {
+        animation: none;
+    }
 }
